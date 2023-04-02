@@ -1,117 +1,129 @@
-/* reset default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* basic styling */
-  body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    background-color: #f5f5f5;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  h1 {
-    font-size: 24px;
-  }
-  
-  form#taskForm {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 50%;
-  }
-  
-  input[name="task"] {
-    flex-grow: 1;
-    padding: 10px;
-    margin-right: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  input#Add {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .taskList {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-  }
-  
-  h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  #tasks {
-    margin-top: 10px;
-  }
-  
-  .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .content .text {
-    flex-grow: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: #f5f5f5;
-    color: #333;
-  }
-  
-  .actions {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .actions button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .actions button.edit {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .actions button.delete {
-    background-color: #dc3545;
-    color: #fff;
-  }
-  
+*{
+  margin: 0px;
+  font-family: Gilroy;
+  padding: 0px;
+}
+
+
+/* Set the background image to a car */
+body {
+  background-image: url("https://hips.hearstapps.com/hmg-prod/images/2023-mclaren-artura-101-1655218102.jpg?crop=1.00xw:0.847xh;0,0.153xh&resize=1200:*");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Create a glass effect for the header */
+header {
+  backdrop-filter: blur(30px);
+  background-color: rgba(46, 40, 40, 0.7);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  color: #fff;
+}
+
+.text{
+width: 70%;
+}
+/* Style the task form inputs */
+#taskForm input[type="text"], 
+#taskForm input[type="submit"] {
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin-right: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.task{
+  display: flex;
+  width: 100%;
+}
+
+#taskForm input[type="submit"] {
+  border: 2px solid greenyellow;
+  background-color: rgba(91, 169, 108, 0.171);
+  color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#taskForm input[type="submit"]:hover {
+  background-color: #0c0;
+}
+
+/* Style the task list */
+.taskList {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.taskList h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Style the task items */
+.content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.text {
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin-right: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.actions button {
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.actions button:hover {
+  background-color: #ccc;
+}
+
+.edit {
+  color: #0c0;
+}
+
+.delete {
+  color: #f00;
+}
+
+/* Set the opacity of the entire page */
+body {
+  opacity: 0.9;
+}
